@@ -72,4 +72,3 @@ source("//HKDC01/Shared Folders/Company/ggplot_theme/custom_functions.r")
                                                  colour = NA))
     ggsave(filename = "Charts/falling_rectangles.png", plot = g,
            width = 26.7, height = 15, units = "in", bg = "#000000")
-
