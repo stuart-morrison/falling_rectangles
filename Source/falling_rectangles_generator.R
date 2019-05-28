@@ -45,10 +45,8 @@ source("//HKDC01/Shared Folders/Company/ggplot_theme/custom_functions.r")
     rectangles <- tibble()
     for (xx in 1:25) {
         for (yy in 1:14) {
-            temp_rotation <- case_when(yy > 3 ~ runif(n = 1,
-                                                      min = -pi / 3.5 * yy / 25,
-                                                      max = pi / 3.5 * yy / 25),
-                                       TRUE ~ 0)
+            temp_rotation <- runif(n = 1, min = -pi / 4 * (yy - 1) / 25,
+                                   max = pi / 4 * (yy - 1) / 25)
 
             rectangles %<>% bind_rows(segment_maker(x = xx,
                                                     y = yy,
