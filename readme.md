@@ -1,5 +1,10 @@
 # Falling rectangles  pattern
 
-Code to make this:
+Code to make generative art, eg:
 
-![](Charts/falling_rectangles.png "Rectangles")
+### Falling rectangles
+![](Charts/falling_rectangles_lo_res.png "Rectangles")
+
+
+### Diagonal lines
+![](Charts/diaglonal_lines_lo_res.png "Lines")

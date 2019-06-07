@@ -69,3 +69,21 @@ source("//HKDC01/Shared Folders/Company/ggplot_theme/custom_functions.r")
                                                  colour = NA))
     ggsave(filename = "Charts/falling_rectangles.png", plot = g,
            width = 26.7, height = 15, units = "in", bg = "#000000")
+
+################################################################################
+#### Plot ####
+################################################################################
+
+    g <- ggplot() +
+            coord_fixed() +
+            geom_segment(data = rectangles,
+                         aes(x = x + x_0, y = -y - y_0,
+                             xend = xend + x_0, yend = -yend - y_0,
+                             group = point),
+                         col = "#FFFFFF") +
+            theme_void() +
+            theme(plot.background = element_rect(fill = "#000000",
+                                                 colour = NA))
+    ggsave(filename = "Charts/falling_rectangles_lo_res.png", plot = g,
+           width = 13.35, height = 7.5, units = "in", bg = "#000000")
+
