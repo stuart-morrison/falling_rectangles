@@ -7,4 +7,4 @@ Code to make generative art, eg:
 
 
 ### Diagonal lines
-![](Charts/diaglonal_lines_lo_res.png "Lines")
+![](Charts/diagonal_lines_lo_res.png "Lines")
