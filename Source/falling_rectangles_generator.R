@@ -1,7 +1,6 @@
 source("//HKDC01/Shared Folders/Company/ggplot_theme/HK_header.r")
 # Author: Stuart Morrison
 # Date: 28 May 2019
-rm(list = ls())
 library(tidyverse, quietly = T)
 library(magrittr, quietly = T)
 library(scales, quietly = T)
