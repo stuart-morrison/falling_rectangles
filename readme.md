@@ -1,4 +1,4 @@
-# Falling rectangles  pattern
+# Generative art patterns
 
 Code to make generative art, eg:
 

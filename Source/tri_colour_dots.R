@@ -82,13 +82,5 @@ source("//HKDC01/Shared Folders/Company/ggplot_theme/custom_functions.r")
 #### Plot smaller version ####
 ################################################################################
 
-    g <- ggplot() +
-            coord_fixed() +
-            geom_path(data = splines,
-                        aes(x = x, y = -y, group = group),
-                        col = "#FFFFFF") +
-            theme_void() +
-            theme(plot.background = element_rect(fill = "#000000",
-                                                 colour = NA))
     ggsave(filename = "Charts/tri_colour_dots_lo_res.png", plot = g,
            width = 13.35, height = 7.5, units = "in", bg = "#000000")
