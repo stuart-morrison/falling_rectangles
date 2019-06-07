@@ -8,3 +8,7 @@ Code to make generative art, eg:
 
 ### Diagonal lines
 ![](Charts/diagonal_lines_lo_res.png "Lines")
+
+
+### Tri-colour dots
+![](Charts/tri_colour_dots_lo_res.png "Dots")
