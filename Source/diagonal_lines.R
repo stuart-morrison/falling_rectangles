@@ -1,13 +1,8 @@
-source("//HKDC01/Shared Folders/Company/ggplot_theme/HK_header.r")
 # Author: Stuart Morrison
 # Date: 28 May 2019
 library(tidyverse, quietly = T)
 library(magrittr, quietly = T)
 library(scales, quietly = T)
-
-# Import the HoustonKemp ggplot theme
-source("//HKDC01/Shared Folders/Company/ggplot_theme/houstonkemp_theme.r")
-source("//HKDC01/Shared Folders/Company/ggplot_theme/custom_functions.r")
 
 "###############################################################################
 #### Diagonal lines ####
@@ -50,7 +45,7 @@ source("//HKDC01/Shared Folders/Company/ggplot_theme/custom_functions.r")
     lines <- tibble()
 
     for (y_int in (1 - x_res):(y_res - 1)) {
-        group %+% 1
+        group <- group + 1
         for (xx in 1:x_res) {
             if (((y_int + xx) >= 1) & ((y_int + xx) <= y_res)) {
                 temp_normal <- normal_force_maker(x_mid = x_res / 2, y_mid = y_res / 2,

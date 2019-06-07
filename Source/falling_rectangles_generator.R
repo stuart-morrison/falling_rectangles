@@ -1,13 +1,8 @@
-source("//HKDC01/Shared Folders/Company/ggplot_theme/HK_header.r")
 # Author: Stuart Morrison
 # Date: 28 May 2019
 library(tidyverse, quietly = T)
 library(magrittr, quietly = T)
 library(scales, quietly = T)
-
-# Import the HoustonKemp ggplot theme
-source("//HKDC01/Shared Folders/Company/ggplot_theme/houstonkemp_theme.r")
-source("//HKDC01/Shared Folders/Company/ggplot_theme/custom_functions.r")
 
 "###############################################################################
 #### Falling rectangles ####

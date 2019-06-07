@@ -1,13 +1,8 @@
-source("//HKDC01/Shared Folders/Company/ggplot_theme/HK_header.r")
 # Author: Stuart Morrison
 # Date: 28 May 2019
 library(tidyverse, quietly = T)
 library(magrittr, quietly = T)
 library(scales, quietly = T)
-
-# Import the HoustonKemp ggplot theme
-source("//HKDC01/Shared Folders/Company/ggplot_theme/houstonkemp_theme.r")
-source("//HKDC01/Shared Folders/Company/ggplot_theme/custom_functions.r")
 
 "###############################################################################
 #### Tri-colour dots ####
@@ -19,8 +14,10 @@ source("//HKDC01/Shared Folders/Company/ggplot_theme/custom_functions.r")
 
     dot_maker <- function(x, y, size_force) {
 
-        temp <- tibble(x = x + 0.5 * cos(2 * pi * (1:3) / 3 + pi / 2),
-                       y = y + 0.5 * sin(2 * pi * (1:3) / 3 + pi / 2),
+
+
+        temp <- tibble(x = x + 1 / (2 + sin(pi / 3)) * cos(2 * pi * (1:3) / 3 + pi / 2),
+                       y = y + 1 / (2 + sin(pi / 3)) * sin(2 * pi * (1:3) / 3 + pi / 2),
                        colour = letters[1:3],
                        size = size_force)
 
