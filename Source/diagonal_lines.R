@@ -79,7 +79,7 @@ source("//HKDC01/Shared Folders/Company/ggplot_theme/custom_functions.r")
         temp_data <- lines %>%
                         filter(group == i)
 
-        splines %<>% bind_rows(as_tibble(spline(temp_data$x, temp_data$y, method = "natural")) %>%
+        splines %<>% bind_rows(as_tibble(spline(temp_data$x, temp_data$y, method = "natural", n = 9 * nrow(temp_data))) %>%
                                    mutate(group = i))
 
     }
