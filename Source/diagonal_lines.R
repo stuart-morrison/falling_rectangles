@@ -98,13 +98,22 @@ library(scales, quietly = T)
 #### Plot smaller version ####
 ################################################################################
 
+    ggsave(filename = "Charts/diagonal_lines_lo_res.png", plot = g,
+           width = 13.35, height = 7.5, units = "in", bg = "#000000")
+
+################################################################################
+#### Plot in cream ####
+################################################################################
+
     g <- ggplot() +
             coord_fixed() +
             geom_path(data = splines,
-                        aes(x = x, y = -y, group = group),
-                        col = "#FFFFFF") +
+                      aes(x = x, y = -y, group = group),
+                      col = "#182E3A",
+                      size = 2) +
             theme_void() +
-            theme(plot.background = element_rect(fill = "#000000",
+            theme(plot.background = element_rect(fill = "#fffff0",
                                                  colour = NA))
-    ggsave(filename = "Charts/diagonal_lines_lo_res.png", plot = g,
-           width = 13.35, height = 7.5, units = "in", bg = "#000000")
+    ggsave(filename = "Charts/diagonal_lines_cream.png", plot = g,
+           width = 26.7, height = 15, units = "in", bg = "#fffff0")
+
