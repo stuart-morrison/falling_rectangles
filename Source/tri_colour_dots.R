@@ -25,13 +25,13 @@ library(scales, quietly = T)
     }
 
     size_force_maker <- function(x_mid, y_mid, radius,
-                                 x, y, severity = 3) {
+                                 x, y, severity = 6, regular = 3) {
 
         if (sqrt((x_mid - x) ^ 2 + (y_mid - y) ^ 2) <= radius) {
             degree <- runif(n = 1, min = 0.5, max = severity)
             return(degree)
         } else {
-            return(1.4)
+            return(regular)
         }
 
     }
