@@ -82,3 +82,35 @@ library(scales, quietly = T)
     ggsave(filename = "Charts/falling_rectangles_lo_res.png", plot = g,
            width = 13.35, height = 7.5, units = "in", bg = "#000000")
 
+################################################################################
+#### Make data for vertical version ####
+################################################################################
+
+    rectangles <- tibble()
+    for (xx in 1:14) {
+        for (yy in 1:25) {
+            temp_rotation <- runif(n = 1, min = -pi / 4 * (yy - 1) / 25,
+                                   max = pi / 4 * (yy - 1) / 25)
+
+            rectangles %<>% bind_rows(segment_maker(x = xx,
+                                                    y = yy,
+                                                    rotation = temp_rotation))
+        }
+    }
+
+################################################################################
+#### Plot ####
+################################################################################
+
+    g <- ggplot() +
+        coord_fixed() +
+        geom_segment(data = rectangles,
+                     aes(x = x + x_0, y = -y - y_0,
+                         xend = xend + x_0, yend = -yend - y_0,
+                         group = point),
+                     col = "#FFFFFF") +
+        theme_void() +
+        theme(plot.background = element_rect(fill = "#000000",
+                                             colour = NA))
+    ggsave(filename = "Charts/falling_rectangles vertical.png", plot = g,
+           width = 15, height = 26.7, units = "in", bg = "#000000")
